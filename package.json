@@ -1,0 +1,29 @@
+{
+  "name": "database-state-example",
+  "version": "1.0.0",
+  "description": "Example project showing how to keep database state in your repo",
+  "main": "index.js",
+  "scripts": {
+    "migrate": "node supabase/run.js",
+    "migration": "node supabase/run.js",
+    "migrate:local": "supabase db push",
+    "sync:db": "node supabase/run.js --db",
+    "sync:policies": "node supabase/run.js --policies",
+    "sync": "yarn sync:db && yarn migrate",
+    "migration:create": "yarn migration --create",
+    "migrations:list": "yarn migration --list",
+    "migration:revert": "yarn migration --revert",
+    "migration:skip": "yarn migration --skip",
+    "migration:debug": "yarn migration --debug"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "lodash": "^4.17.21",
+    "minimist": "^1.2.8",
+    "pg": "^8.11.3",
+    "debug": "^4.3.4"
+  },
+  "devDependencies": {
+    "supabase": "^2.23.4"
+  }
+}
