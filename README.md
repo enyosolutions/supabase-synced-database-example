@@ -1,6 +1,21 @@
-# Database State Management Example
+# Supbase Database State Management Example
 
-This is a minimal example showing how to keep your entire database state in your repository using Supabase.
+This is a minimal example showing how to keep your entire database state in your repository using Supabase : Policies, triggers, cron, functions etc.
+
+## Why 
+
+I was constantly running into issues where:
+- **RLS UI is annoying** - managing policies through Supabase dashboard is clunky and error-prone
+- **RLS deployment bugs** - policies weren't being deployed as part of go-live, or were named differently from what they actually do
+- My local database was different from staging
+- Staging was different from production
+- Database functions, triggers, and policies were getting lost
+- We were increasingly relying on postgres db functions and because of that a function code was changing often.
+- Cron jobs would disappear after deployments
+- Team members had inconsistent database states
+- **Row Level Security policies would drift** - manual changes in Supabase dashboard weren't in code
+
+So i decided to build a simple system to allow syncing our database across developers and envs.
 
 ## Project Structure
 
