@@ -1,8 +1,11 @@
 {
-  "name": "database-state-example",
+  "name": "supabase-backend-sync-example",
   "version": "1.0.0",
   "description": "Example project showing how to keep database state in your repo",
   "main": "index.js",
+  "author": "Faouzane BATIGA",
+  "license": "MIT",
+  "private": false,
   "scripts": {
     "migrate": "node supabase/run.js",
     "migration": "node supabase/run.js",
