@@ -1,4 +1,4 @@
-# Supbase Database State Management Example
+# Supabase Database State Management Example
 
 This is a minimal example showing how to keep your entire database state in your repository using Supabase : Policies, triggers, cron, functions etc.
 
